@@ -1,0 +1,65 @@
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+
+body {
+  background: linear-gradient(145deg, hsl(290, 75%, 92%), hsl(247, 85%, 92%));
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .max-width {
+    width: min(1440px, calc(100% - 4rem));
+    margin: auto;
+  }
+  .shadow-over {
+    box-shadow: 2px 2px 2px hsl(0 0 0 / 0.15);
+  }
+  .input-S-F {
+    @apply max-sm:w-[100px] max-sm:text-[14px] max-sm:h-7;
+  }
+  .dots {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg)
+      brightness(103%) contrast(101%);
+  }
+  .gradient-bg {
+    background: linear-gradient(145deg, hsl(290, 75%, 92%), hsl(247, 85%, 92%));
+  }
+
+  .edit-inputs {
+    @apply flex capitalize font-semibold gap-2 flex-col justify-start items-start;
+  }
+  .create-inputs input {
+    @apply ml-auto bg-gray-300 font-normal text-[15px] px-1 h-6 outline-none border-black border rounded w-full max-w-[195px];
+  }
+  .edit-inputs input {
+    @apply bg-gray-300 px-1 h-6 outline-none font-normal text-[15px] border-black border rounded;
+  }
+  .text-area {
+    @apply outline-none bg-gray-300 rounded border-black border ml-auto w-full px-2 max-w-[195px];
+  }
+  .edit-area {
+    @apply outline-none bg-gray-300 rounded border-black border w-full px-2;
+  }
+  .error-form {
+    @apply w-full text-right text-red-400 font-semibold;
+  }
+
+  .submit-btn {
+    @apply bg-blue-500;
+  }
+
+  .task-width {
+    width: calc(100% - 1.5rem);
+  }
+  @media screen and (max-width: 400px) {
+    .adjustable-w {
+      width: calc(100% - 2rem);
+      margin: 0 auto;
+    }
+  }
+
+  .submit-btn {
+    @apply px-5 bg-blue-500 rounded text-white text-[15px];
+  }
+}
