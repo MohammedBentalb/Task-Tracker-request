@@ -27,7 +27,7 @@ body {
   }
 
   .edit-inputs {
-    @apply flex capitalize font-semibold gap-2 flex-col justify-start items-start;
+    @apply flex capitalize font-semibold gap-2 flex-col justify-start items-start cursor-not-allowed;
   }
   .create-inputs input {
     @apply ml-auto bg-gray-300 font-normal text-[15px] px-1 h-6 outline-none border-black border rounded w-full max-w-[195px];

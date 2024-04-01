@@ -68,7 +68,7 @@ function EditTask() {
             <label htmlFor="desc" className="font-semibold">
               Description:
             </label>
-            <p className="rounded border border-black bg-gray-300 p-1 text-[15px]">
+            <p className="cursor-not-allowed rounded border border-black bg-gray-300 p-1 text-[15px]">
               {task.desc}
             </p>
           </div>
