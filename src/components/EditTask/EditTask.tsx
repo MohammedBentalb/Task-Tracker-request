@@ -20,6 +20,10 @@ function EditTask() {
   ];
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (status === task.status && priority === task.priority) {
+      setIsEditOpen(false);
+      return;
+    }
     EditTask({
       id: task.id,
       title: task.title,
@@ -87,7 +91,7 @@ function EditTask() {
           />
           <div className="flex flex-wrap items-center justify-between gap-2">
             <div className="flex items-center justify-start gap-2">
-              <label htmlFor="priority" className='text-[15px] font-semibold'>
+              <label htmlFor="priority" className="text-[15px] font-semibold">
                 Priority:
               </label>
               <select
@@ -130,7 +134,11 @@ function EditTask() {
         </div>
         <div className="my-2 flex items-center justify-center gap-5">
           <button className="submit-btn">Submit</button>
-          <button onClick={handleReset} className="submit-btn">
+          <button
+            type="button"
+            onClick={handleReset}
+            className="submit-btn !bg-blue-500"
+          >
             reset
           </button>
         </div>
