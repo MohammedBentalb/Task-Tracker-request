@@ -85,7 +85,7 @@ const AddTask = memo(function ({
           <p className="error-form ">
             {errors.desc && errors.desc.message?.toString()}
           </p>
-          <div className=" flex items-start">
+          <div className=" flex items-start gap-2">
             <label htmlFor="desc">Description:</label>
             <textarea
               className="text-area"
@@ -126,7 +126,8 @@ const AddTask = memo(function ({
               register={register}
             />
           </div>
-          <input type="submit" value={'submit'} className="submit-btn" />
+
+          <button className="submit-btn m-auto w-20 text-[15px]">Submit</button>
         </form>
       </div>
     </>

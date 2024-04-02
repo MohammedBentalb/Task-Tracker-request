@@ -26,6 +26,9 @@ body {
     background: linear-gradient(145deg, hsl(290, 75%, 92%), hsl(247, 85%, 92%));
   }
 
+  .create-inputs {
+    @apply flex capitalize font-semibold gap-2 ;
+  }
   .edit-inputs {
     @apply flex capitalize font-semibold gap-2 flex-col justify-start items-start cursor-not-allowed;
   }
